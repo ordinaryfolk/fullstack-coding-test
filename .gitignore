@@ -32,3 +32,6 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+#Ignore project metadata of IntelliJ IDE
+/.idea
