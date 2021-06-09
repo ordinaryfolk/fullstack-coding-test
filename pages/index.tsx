@@ -2,6 +2,7 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import DynamicText from "../components/DynamicText";
 import { useRef } from "react";
+import { Box, Input, Link } from "@chakra-ui/react";
 
 const Home = () => {
   const childRef = useRef();
@@ -12,7 +13,7 @@ const Home = () => {
   };
 
   return (
-    <div className={styles.container}>
+    <Box className={styles.container}>
       <Head>
         <title>Coding Test</title>
         <link rel="icon" href="/favicon.ico" />
@@ -20,9 +21,9 @@ const Home = () => {
 
       <main className={styles.main}>
         <DynamicText ref={childRef}/>
-        <input onChange={onChange} />
+        <Input onChange={onChange} placeholder="Enter some texts"/>
       </main>
-    </div>
+    </Box>
   );
 };
 
