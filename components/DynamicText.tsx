@@ -1,13 +1,20 @@
-import React, { useState } from "react";
+import { Text } from "@chakra-ui/react";
+import React, { forwardRef, useImperativeHandle, useState } from "react";
 
-const DynamicText = () => {
+const DynamicText = forwardRef((props, ref) => {
   const [value, setValue] = useState("Random Text");
 
-  const changeValue = (newValue) => {
+  const changeValue = (newValue: string) => {
     setValue(newValue);
   };
 
-  return <h1>{value}</h1>;
-};
+  useImperativeHandle(ref, () => {
+    return {
+      changeValue: changeValue,
+    };
+  });
+
+  return <Text maxW={'90vw'} fontSize="lg">{value}</Text>;
+});
 
 export default DynamicText;
