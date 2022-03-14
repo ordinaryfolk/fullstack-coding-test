@@ -7,7 +7,7 @@ body {
 }
 
 a {
-  color: green;
+  color: blue !important;
   text-decoration: none;
 }
 
