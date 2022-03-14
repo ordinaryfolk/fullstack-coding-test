@@ -21,7 +21,7 @@ export default function Login() {
     signInWithEmailAndPassword(email, password)
       .then(() => {
         setLoading(false);
-        router.push("/");
+        router.push("/blog");
       })
       .catch((error) => {
         setLoading(false);
