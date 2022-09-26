@@ -8,6 +8,11 @@
     "start": "next start"
   },
   "dependencies": {
+    "@chakra-ui/react": "^1.8.6",
+    "@emotion/react": "^11.8.2",
+    "@emotion/styled": "^11.8.1",
+    "firebase": "^8.10.1",
+    "framer-motion": "^4.1.17",
     "next": "10.0.7",
     "react": "17.0.1",
     "react-dom": "17.0.1"

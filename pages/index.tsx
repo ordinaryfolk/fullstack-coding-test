@@ -1,25 +1,18 @@
-import Head from "next/head";
-import styles from "../styles/Home.module.css";
-import DynamicText from "../components/DynamicText";
-
-const Home = () => {
-  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    console.log(e.target.value);
-  };
-
+import { Container, Button } from "@chakra-ui/react";
+import { useAuth } from "contexts/AuthUserContext";
+import { withAuthen } from "HOCs/withAuthen";
+import Link from "next/link";
+const Home = withAuthen(function Home() {
+  const { signOut } = useAuth();
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Coding Test</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <DynamicText />
-        <input onChange={onChange} />
-      </main>
-    </div>
+    <Container padding={16}>
+      <Link href="/blog">
+        <a>Go to Blogs</a>
+      </Link>
+      {"  "}
+      Or <Button onClick={signOut}>Sign out</Button>
+    </Container>
   );
-};
+});
 
 export default Home;
