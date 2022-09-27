@@ -1,5 +1,5 @@
 import React, { useState, forwardRef, useImperativeHandle } from "react";
-import { Heading } from "@chakra-ui/react";
+import { Text, Stack } from "@chakra-ui/react";
 
 const DynamicText = forwardRef((props, ref) => {
   const [value, setValue] = useState("Random Text");
@@ -8,7 +8,11 @@ const DynamicText = forwardRef((props, ref) => {
 
   useImperativeHandle(ref, () => ({ changeValue: changeValue }));
 
-  return <Heading>{value}</Heading>;
+  return (   
+      <Stack spacing={2}>
+        <Text fontSize="xl" maxWidth={180}>{value}</Text>;
+      </Stack>   
+  )
 });
 
 export default DynamicText;
