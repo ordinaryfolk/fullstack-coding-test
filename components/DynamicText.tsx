@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Heading } from "@chakra-ui/react";
 
 const DynamicText = () => {
   const [value, setValue] = useState("Random Text");
@@ -7,7 +8,7 @@ const DynamicText = () => {
     setValue(newValue);
   };
 
-  return <h1>{value}</h1>;
+  return <Heading>{value}</Heading>;
 };
 
 export default DynamicText;
