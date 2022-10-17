@@ -1,13 +1,14 @@
 import React, { useState } from "react";
+import { Text } from "@chakra-ui/react";
 
 const DynamicText = () => {
-  const [value, setValue] = useState("Random Text");
+  const [value, setValue] = useState("Random Textttt");
 
   const changeValue = (newValue) => {
     setValue(newValue);
   };
 
-  return <h1>{value}</h1>;
+  return <Text color="green.200">{value}</Text>;
 };
 
 export default DynamicText;
