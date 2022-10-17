@@ -20,7 +20,7 @@ const Home = () => {
       <Box>
         <Flex direction="column" align="center" justifyContent="center">
           <DynamicText ref={inputTextRef} />
-          <Input onChange={onChange} />
+          <Input onChange={onChange} mt="20px" />
         </Flex>
       </Box>
     </Container>
