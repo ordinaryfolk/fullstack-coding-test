@@ -1,4 +1,4 @@
-import React, { forwardRef, SetStateAction, useImperativeHandle, useState } from "react";
+import React, { forwardRef, useImperativeHandle, useState } from "react";
 import { Text, Box } from "@chakra-ui/react";
 
 const DynamicText = forwardRef((_props, ref) => {
@@ -8,7 +8,7 @@ const DynamicText = forwardRef((_props, ref) => {
     ref,
     () => {
       return {
-        changeValue(newValue: SetStateAction<string>) {
+        changeValue(newValue: string) {
           setValue(newValue);
         },
       };
